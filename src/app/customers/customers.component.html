@@ -1,0 +1,22 @@
+<div class="container">
+           <table class="table table-striped table-hover">   
+               <thead>
+                   <tr>
+                     <th>CPF</th>
+                     <th>Nome</th>
+                     <th>Email</th>
+                     <th>Telefone</th>
+                   </tr>
+               </thead>
+               <tbody>  
+                 <tr *ngFor = 'let c of customers | paginate: { itemsPerPage: contador, currentPage: pag }'>
+                     <td>{{c.cpf}}</td>
+                     <td>{{c.nome}}</td>
+                     <td>{{c.email}}</td>
+                     <td>{{c.telefone}}</td>
+                 </tr>
+               </tbody>
+           </table>
+       <pagination-controls (pageChange)="pag = $event"></pagination-controls>
+       <button routerLink="new" class="btn btn-success">Novo Cliente</button>
+ </div>

@@ -1,0 +1,74 @@
+<div class="container">
+  <div [ngClass]="{'success': isSuccess == true, 'error': isSuccess == false}" [ngStyle]="{'visibility': isVisible ? 'visible' : 'hidden' }">{{message}}</div>
+  <h2>Cadastrar novo cliente</h2>
+  <form [formGroup]="formulario">
+    <div class="form-group">
+      <label for="cpf">CPF:</label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        formControlName="cpf"
+        mask="000.000.000-00"
+      />
+      <label for="nome">Nome:</label>
+      <input type="text" class="form-control" required formControlName="nome" />
+      <label for="email">E-mail:</label>
+      <input
+        type="email"
+        class="form-control"
+        formControlName="email"
+      />
+      <label for="telefone">Telefone:</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="telefone"
+        mask="(00)00000-0000"
+      />
+      </div>
+      <h3>Endereço</h3>
+      <label for="cep">CEP: </label>
+      <input type="text" class="form-control" required formControlName="cep" />
+      <label for="rua">Rua: </label>
+      <input type="text" class="form-control" required formControlName="rua" />
+      <label for="numero">Número: </label>
+      <input
+        type="number"
+        class="form-control"
+        required
+        formControlName="numero"
+      />
+      <label for="complemento">Complemento: </label>
+      <input type="text" class="form-control" formControlName="complemento" />
+      <label for="bairro">Bairro: </label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        formControlName="bairro"
+      />
+      <label for="cidade">Cidade: </label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        formControlName="cidade"
+      />
+      <label for="estado">Estado: </label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        formControlName="estado"
+      />
+      <div class="buttons">
+        <button type="submit" style="background-color: darkgreen;" (click)="postar()" class="btn btn-success">
+          CONFIRMAR
+        </button>
+        <button type="button" style="background-color: firebrick;" routerLink="/" class="btn btn-secondary">
+          CANCELAR
+        </button>
+      </div>
+  </form>
+</div>

@@ -1,0 +1,39 @@
+.container {
+    margin: 1rem;
+}
+
+input {
+    margin: 5px;
+}
+
+label {
+    width: 100px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input {
+    width: 20rem;
+}
+
+button {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+button:first-child {
+    margin-left: 0;
+}
+
+.error {
+    color: red;
+    display: inline-block;
+}
+
+.success {
+    color: green;
+    display: inline-block;
+}

@@ -1,0 +1,17 @@
+.container {
+    margin: 1rem;
+}
+
+button {
+    background-color: brown;
+    color: white;
+}
+
+button:hover{
+    filter: opacity(0.8);
+    transition: 0.5s;
+}
+
+table tbody td {
+    padding: 0 20px;
+}
